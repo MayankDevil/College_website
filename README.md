@@ -38,11 +38,9 @@
 
 ### Responsive
 
-**Breakpoints** { 375 | 576 | 768 | 992 | 1200 }
+**Breakpoints** { 400 | 576 | 768 | 992 | 1200 }
 
 ### Theme Mode
 
-_Switch between dark and light that help to more effective view as day Nidht and Battery Saving._
-
-
+_Simple white theme conbination with dark and blue colour._
 
