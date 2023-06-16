@@ -1,0 +1,604 @@
+/*
+-    website-1 "College"
+-    Design & Developed by Mayank
+-    copyright by Mayank
+-    CSS : css/style
+*/
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Comic+Neue&family=Raleway&display=swap');
+/*
+font-family: 'Carter One', cursive;
+font-family: 'Comic Neue', cursive;
+font-family: 'Raleway', sans-serif;
+*/
+@import url(main.css);
+@import url(boxicons.min.css);
+/* @import "main.css";
+@import "response.css"; */
+
+/*
+    ----------
+    | import |
+    ----------
+*/
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    text-decoration: none;
+    color:#000;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+:root
+{
+    --primary:#3E54D3;
+    --secondary:#4F80E2;
+    --tertiary:#15CDCA;
+    --fouth:#4FE0B6;
+    --lgray:#d4dee8;
+    --gray:#6c757d;
+    --dark:#343a40;
+    --light:#f8f9fa;
+    --head:'Carter One', cursive;
+    --title:'Comic Neue', cursive;
+    --write:'Raleway', sans-serif;
+}
+::-webkit-scrollbar
+{
+    width: 10px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb
+{
+    background: var(--dark);
+    border-radius: 5px;
+}
+/*
+    body css --------------------------
+*/
+#mother_container
+{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+/*
+    main css --------------------------
+*/
+#main
+{
+    width: 100%;
+}
+/*
+    aside css -------------------------
+*/
+#aside
+{
+    padding:1rem;
+    background: var(--dark);
+}
+#aside a
+{
+    display: block;
+    color:var(--light);
+}
+#aside a:hover
+{
+    color: var(--secondary);
+    border:1px solid var(--gray);
+}
+#aside a:hover .bx
+{
+    color: var(--light);
+}
+#aside .bx
+{
+    padding:1rem;
+    color: var(--secondary);
+}
+/*
+    header css ------------------------
+*/
+.header_bg
+{
+    color: var(--light) !important;
+    background: var(--dark) !important;
+}
+#header
+{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+#logo
+{
+    padding: 0.5rem;
+    color:var(--secondary);
+}
+#toggle_btn
+{
+    padding: 0.2rem;
+    font-size: 2rem;
+    color:var(--light);
+    background:var(--dark);
+}
+#toggle_btn:hover
+{
+    color:var(--secondary);
+}
+/*
+    home css --------------------------
+*/
+#home
+{
+    min-height:auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--lgray);
+}
+h1
+{
+    padding: 0 2rem;
+    font: 5rem var(--head);
+    color: var(--lgray);
+}
+h2
+{
+    margin-top: 20%;
+    padding: 1rem 2rem ;
+    font:2rem var(--write);
+    color: var(--dark);
+}
+strong
+{
+    display: block;
+    padding: 2rem;
+    font:1.5rem var(--title);
+    color: var(--gray);
+}
+.head_btn
+{
+    display: inline-block;
+    margin: 4rem 0;
+    padding: 1rem 3rem;
+    color:var(--light);
+    background:var(--secondary) ;
+    clip-path: polygon(0%0%, 0%100%, 90%100%, 100%0%);
+}
+.head_btn:hover
+{
+    background: linear-gradient(to left,#4F80E2,#3E54D3);
+    transition: all linear 0.5s;
+    transform: translate(2rem);
+}
+.head_btn .bx
+{
+    font-size: 1rem;
+    color:var(--light);
+}
+#home .col-50:last-child
+{
+    background: rgba(79, 128, 226, 0.6) url(../data/gernal/degree.jpg);
+    background-size:100% 100%;
+    background-blend-mode: overlay;
+    clip-path: polygon(20%0%, 0%100%, 100%100%, 100%0%);
+}
+/*
+    informative css -------------------
+*/
+.informative
+{
+    display:grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4,1fr);
+    padding: 2rem;
+}
+.informative_box
+{
+    padding: 1rem;
+    text-align: center;
+    background: var(--dark);
+    border-radius: 10px;
+}
+.informative_box:hover
+{
+    transition: all linear 0.5s;
+    background: var(--secondary);
+}
+.informative_box .bx
+{
+    padding: 1rem;
+    color:var(--light);
+    font-size: 3rem;
+}
+.informative_box div
+{
+    font:1rem var(--write);
+    color:var(--light);
+}
+/*
+    facilities css --------------------
+*/
+.facilities_container
+{
+    padding: 5%  3rem;
+    display: grid;
+    grid-template-columns: 50px auto;
+}
+#scroll_btn
+{
+    /* background: pink; */
+    display: flex;
+    flex-direction:column ;
+    justify-content: space-around;
+}
+#scroll_btn span
+{
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+#scroll_btn span:hover
+{
+    background: linear-gradient(to right, #d4dee8, transparent);
+    border-radius: 0 2rem 2rem 0;
+}
+.facilities_container #facility
+{
+    padding: 2rem 1rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(5,300px);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.facilities_container #facility::-webkit-scrollbar
+{
+    height: 0;
+    width: 0;
+}
+.facilities_box
+{
+    display: block;
+    border-bottom: 3px solid var(--lgray);
+}
+.facilities_box:hover
+{
+    box-shadow: 1px 1px 10px var(--dark);
+}
+.facilities_box p
+{
+    padding: 1rem 0.5rem;
+}
+.pic
+{
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+    clip-path: polygon(0%0%, 0%90%, 100%100%, 100%0%);
+}
+.card_btn
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    color:var(--gray);
+    font-size:1rem;
+    background: transparent;
+}
+.card_btn .bx
+{
+    font-size: 1.5rem;
+    color: var(--gray);
+}
+/*
+    newesevent css --------------------
+*/
+#newsevent
+{
+    display: grid;
+    grid-gap:1rem;
+    grid-template-columns: repeat(3,1fr);
+    margin: 5% 2rem;
+    padding: 0;
+}
+.update_box h4
+{
+    padding: 1rem 0;
+}
+.update
+{
+    height: 300px;
+    overflow-y:scroll;
+}
+.update::-webkit-scrollbar
+{
+    width: 1px;
+}
+.update a
+{
+    margin: 1rem 3px;
+    display: flex;
+    border:1px solid transparent;
+    border-radius: 10px;
+}
+.update a:hover
+{
+    border-color: var(--lgray);
+}
+.update a span:first-child
+{
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 10px;
+    background: var(--secondary);
+}
+.update a span:first-child div
+{
+    color: var(--light);
+    font:1rem var(--title);
+}
+.update a span:last-child
+{
+    padding: 0.5rem;
+    color:var(--dark);
+    font:1rem var(--title);
+}
+#project_update .update a span:first-child
+{
+    font-size: 2rem;
+    color:var(--gray);
+    background:none;
+}
+/*
+    gallery css -----------------------
+*/
+#gallery_container
+{
+    display: grid;
+    grid-gap:1rem;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,200px);
+    margin: 2rem;
+    padding:1rem;
+    position: relative;
+    background:rgba(212, 222, 232, 0.5);
+}
+.pic_frame
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+.pic_frame:hover
+{
+    transition: all linear 0.5s;
+    opacity: 1;
+}
+.pic_frame:nth-child(1)
+{
+    grid-column: 1/3;
+    grid-row:1/2;
+}
+.pic_frame:nth-child(2)
+{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.pic_frame:nth-child(3)
+{
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+.pic_frame:nth-child(4)
+{
+    grid-column: 1/2;
+    grid-row:2/3;
+}
+.pic_frame:nth-child(5)
+{
+    grid-column: 2/4;
+    grid-row:2/3;
+}
+/*
+    about css -------------------------
+*/
+#aboutus
+{
+    padding: 1rem 2rem;
+}
+#aboutus p
+{
+    padding: 1rem;
+}
+#aboutus a
+{
+    margin: 1rem;
+}
+#rule
+{
+    padding: 2rem;
+}
+details summary
+{
+    padding: 1rem;
+    font:1.5rem var(--head);
+    color: var(--dark);
+}
+#rule_list
+{
+    padding: 1rem 0;
+}
+#rule_list li
+{
+    margin-left: 2rem;
+    padding: 1rem;
+    font:1rem var(--title);
+}
+/*
+    tour css --------------------------
+*/
+#tour
+{
+    width: 100%;
+}
+#vedio
+{
+    display: block;
+    padding:3rem;
+    height: 500px;
+    text-align: center;
+    background: #d4dee8 url(../data/gernal/group.jpg) no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+#vedio:hover
+{
+    transition: all linear 1s;
+    background-color: var(--light);
+}
+#vedio h5
+{
+    padding-top: 10%;
+    font: 2rem var(--head) ;
+}
+#vedio p
+{
+    padding: 1rem;
+    font:bold 1rem var(--write);
+    color:var(--secondary);
+}
+#vedio span
+{
+    padding-top: 1rem;
+    font-size: 5rem;
+    color:var(--primary);
+}
+/*
+    dream css ---------------
+*/
+#dream
+{
+    padding: 2rem;
+    display: grid;
+    grid-gap:5%;
+    grid-template-columns: 40% 55%;
+}
+:is(#mission,#vission)
+{
+    padding: 1rem;
+    border: 2px solid var(--lgray);
+}
+:is(#mission,#vission) h3
+{
+    padding: 1rem 0;
+}
+:is(#mission,#vission) p
+{
+    line-height: 25px;
+}
+/*
+    principal css ---------------------
+*/
+#principal
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height:auto;
+}
+/* 
+    footer css ------------------------
+*/
+#footer
+{
+    background: var(--light);
+}
+/* top */
+#top
+{
+    display: grid;
+    grid-template-columns: 30% 15% 30% 25%;
+    margin: 0 2rem;
+    border-bottom:2px solid var(--light);
+}
+.link_box
+{
+    padding: 1rem;
+}
+h6
+{
+    padding: 1rem 0;
+    font:bold 1rem var(--write);
+}
+.link_box a
+{
+    display: block;
+    padding: 0.5rem 0;
+    font-family: var(--title);
+    color:var(--dark);
+}
+.link_box a:hover
+{
+    color:var(--primary);
+}
+.link_box:last-child #dilog
+{
+    padding: 2rem 0 1rem 0;
+    font:1rem var(--title);
+}
+#digital_locker
+{
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 1rem;
+    color: var(--light);
+    background: var(--secondary);
+}
+#digital_locker:hover
+{
+    box-shadow: 1px 1px 10px var(--dark);
+}
+#digital_locker .bx
+{
+    color:var(--light);
+}
+/* social */
+.social
+{
+    margin: 1rem 0;
+}
+.social .bx
+{
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color:var(--light);
+    background: var(--dark);
+    border-radius: 5px;
+}
+.social .bx:hover
+{
+    background: var(--primary);
+}
+/* bottom */
+#bottom
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    font:1rem var(--write);
+    background: var(--lgray);
+}
+.copyright span,
+#develope a
+{
+    display: inline-block;
+    color:var(--secondary);
+    font:1.2rem var(--title);
+}
+/*
+    The End ===========================
+*/

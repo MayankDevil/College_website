@@ -1,0 +1,177 @@
+/*
+-    website-1 "College"
+-    Design & Developed by Mayank
+-    copyright by Mayank
+-    CSS : css/main
+*/
+
+#main_container
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#staffLogin form
+{
+    display: grid;
+    grid-gap:1rem;
+    width: 500px;
+    margin: 10% auto;
+    padding: 1rem;
+    font:1rem var(--title);
+    border:1px solid var(--lgray);
+    border-radius: 10px;
+}
+label
+{
+    color:var(--dark);
+}
+.fld
+{
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border:1px solid var(--lgray);
+}
+.fld:focus
+{
+    border:1px solid var(--gray);
+}
+.btn
+{
+    display: inline-block;
+    padding: 1rem;
+    font:bold 1rem var(--title);
+    color:var(--light);
+    background:var(--secondary);
+    border-radius: 10px;
+}
+.btn:hover
+{
+    box-shadow: 1px 1px 10px var(--dark);
+    background: linear-gradient(to left,#4F80E2,#3E54D3);
+}
+#forget_link
+{
+    display: block;
+    margin:1rem;
+    text-align: right;
+    color:var(--gray);
+}
+#forget_link:hover
+{
+    color:var(--primary);
+}
+/*
+    heading ---
+*/
+.heading
+{
+    padding:3rem;
+    /* border:1px solid green; */
+}
+h3
+{
+    padding: 1rem 0;
+    font:1.5rem var(--write);
+    color: var(--secondary);
+}
+h3 .bx
+{
+    color:var(--dark);
+}
+p
+{
+    word-spacing: 2px;
+    font: 1rem var(--title);
+    color: var(--gray);
+}
+h4
+{
+    margin: 0.5rem;
+    display: block;
+    font:bold 1rem var(--write);
+}
+/*
+    normal button ---
+*/
+.normal_btn
+{
+    display: inline-block;
+    padding: 1rem 2rem;
+    color:var(--secondary);
+    background: transparent;
+    border: 2px solid var(--secondary);
+    border-radius: 5px;
+}
+.normal_btn:active,
+.normal_btn:hover
+{
+    box-shadow: 1px 1px 5px var(--dark);
+    color:var(--light);
+    background: var(--secondary);
+}
+.normal_btn:hover .bx
+{
+    color:var(--light);
+}
+/*
+    secondary header css ---
+*/
+#secondary_header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+#back_btn
+{
+    display: inline-block;
+    padding:0.5rem 1rem;
+    font: 1rem var(--write);
+    color: var(--dark);
+    background: transparent;
+    border:1px solid transparent;
+}
+#back_btn:hover
+{
+    color: var(--secondary);
+    border-color: var(--lgray);
+}
+/*
+    contactus css ---
+*/
+#contactus
+{
+    height: 100%;
+    padding: 2rem;
+}
+#contactus h5
+{
+    padding: 1rem;
+    font:1.5rem var(--title);
+    color:var(--dark);
+}
+#contactus #detail > div
+{
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+#contactus > div label
+{
+    padding: 1rem;
+    font:1rem var(--dark);
+}
+#contactus a
+{
+    display: block;
+    padding: 1rem;
+    color:var(--secondary);
+}
+/*
+    The End ===========================
+*/
