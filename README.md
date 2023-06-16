@@ -8,9 +8,9 @@
 
 - Update : 07-06-2023
 
-- Status : Active Rest
+- Status : Active
 
-- Responsive : Ture False
+- Responsive : Ture
 
 - TecStack : { HTML | CSS | JavaScript }
 
